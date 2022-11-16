@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;1,100&display=swap');
+
+#page {
+    padding-top: 0;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfbfb;
+}
+
+header {
+    background-color: darkgray;
+    width: 100%;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.jotha-logo-container {
+    display: inline;
+}
+
+.jotha-logo {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu-item {
+    text-decoration: none;
+    display: inline;
+    margin-left: 30px;
+}
+
+.main-menu-item a{
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+
