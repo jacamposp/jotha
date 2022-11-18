@@ -64,7 +64,7 @@ header nav {
     margin-left: 30px;
 }
 
-.main-menu-item a{
+.main-menu-item a {
     color: #fff;
     position: relative;
     text-decoration: none;
@@ -75,12 +75,14 @@ header nav {
 .items-container {
     display: grid;
     grid-template-columns: 48% 48%;
-    grid-column-gap: 50px;
+    grid-column-gap: 8%;
+    grid-row-gap: 60px;
 }
 
 .item-title {
     margin: 0;
     font-size: 3em;
+    color: dodgerblue;
 }
 
 .item-content {
@@ -90,4 +92,58 @@ header nav {
 .item-image {
     width: 100%;
     height: 65%;
+}
+
+#hamburgerId {
+    display: none;
+}
+
+/* MOBILE CSS */
+
+@media only screen and (max-width: 999px) {
+    header.is-active {
+        height: 101vh;
+        position: fixed;
+        top: 0%;
+    }
+
+    .header-container {
+        display: inline-block;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .main-menu {
+        list-style: none;
+        position: relative;
+    }
+
+    ul.main-menu {
+        display: none;
+        flex-direction: column;
+        padding: 0 0 55px;
+        margin-top: 40px;
+    }
+
+    ul.main-menu.is-active {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-menu-item {
+        margin: 0 0 30px 0;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #hamburgerId {
+        display: inline-block;
+    }
+
 }

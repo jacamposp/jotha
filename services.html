@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/hamburgers.css">
     <title>Services</title>
 </head>
 
 <body>
     <div id="page">
-        <header>
+        <header id="header">
             <div class="header-container container">
                 <a class="jotha-logo-container"><img class="jotha-logo" src="images/android.png" alt="logo"></a>
                 <nav>
                     <div>
-                        <ul class="main-menu">
+                        <ul id="menu" class="main-menu">
                             <li class="main-menu-item"><a href="index.html">Home</a></li>
                             <li class="main-menu-item"><a href="work.html">Work</a></li>
                             <li class="main-menu-item"><a href="services.html">Services</a></li>
@@ -24,6 +25,11 @@
                             <li class="main-menu-item"><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
+                    <button id="hamburgerId" class="hamburger hamburger--collapse" type="button" onclick="toggleMenu()">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -54,10 +60,13 @@
                             history for future generations, be a witness to tragedy or joy. Photography is the universal
                             language that speaks to the heart.
                         </div>
-                        <img class="item-image" src="images/young-female-product-photographer-in-studio.jpg" alt="branding image" />
+                        <img class="item-image" src="images/young-female-product-photographer-in-studio.jpg"
+                            alt="branding image" />
                     </div>
                     <div>
-                        <img class="item-image" src="images/social-media-instagram-digital-marketing-concept-3d-rendering.jpg" alt="branding image" />
+                        <img class="item-image"
+                            src="images/social-media-instagram-digital-marketing-concept-3d-rendering.jpg"
+                            alt="branding image" />
                         <h1 class="item-title">Social Media</h1>
                         <div class="item-content">Social media can help you engage with your customers and find out what
                             people are saying about your business.
@@ -68,6 +77,18 @@
         </main>
     </div>
 
+    <script type="text/javascript">
+        var hamburgerBtn = document.getElementById("hamburgerId")
+        var header = document.getElementById("header")
+        var menu = document.getElementById("menu")
+
+        function toggleMenu() {
+            hamburgerBtn.classList.toggle("is-active");
+            header.classList.toggle("is-active");
+            menu.classList.toggle("is-active");
+        }
+
+    </script>
 </body>
 
 </html>
