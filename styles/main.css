@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;1,100&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 #page {
     padding-top: 0;
 }
@@ -9,6 +13,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fcfbfb;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1315px;
+    padding: 0 15px;
+    width: 100%;
 }
 
 header {
@@ -26,7 +37,6 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    margin-right: 20px;
 }
 
 .jotha-logo-container {
@@ -60,3 +70,24 @@ header nav {
     text-decoration: none;
 }
 
+
+/* Services Page */
+.items-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 50px;
+}
+
+.item-title {
+    margin: 0;
+    font-size: 3em;
+}
+
+.item-content {
+    font-size: 20px;
+}
+
+.item-image {
+    width: 100%;
+    height: 65%;
+}
