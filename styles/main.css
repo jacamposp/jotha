@@ -41,7 +41,7 @@ body {
 }
 
 header {
-    background: rgb(4,97,159);
+    background: rgb(4, 97, 159);
     width: 100%;
 }
 
@@ -102,7 +102,8 @@ header nav {
     text-align: center;
     font-size: 20px;
     color: #7E7E7E;
-    border: 1px solid #7E7E7E;;
+    border: 1px solid #7E7E7E;
+    ;
 }
 
 .numbers {
@@ -118,8 +119,8 @@ header nav {
 }
 
 .images {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 .text-container {
@@ -130,7 +131,7 @@ header nav {
 
 .text {
     margin: auto;
-    background: rgb(4,97,159);
+    background: rgb(4, 97, 159);
     padding: 5px 15px;
 }
 
@@ -170,18 +171,18 @@ header nav {
 }
 
 /*  Contact us page  */
+.contact {
+    background-color: #c5c2c2;
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.contact-form {
+.contact-form {}
 
-}
-
-.contact-data {
-
-}
+.contact-data {}
 
 .form {
     display: flex;
@@ -198,11 +199,11 @@ header nav {
 .inputBox input {
     width: 100%;
     padding: 10px;
-    border: 1px solid rgb(4,97,159);
-    background: #fff;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(4, 97, 159);
+    background: #c5c2c2;
     outline: none;
-    color: rgb(4,97,159);
+    color: rgb(4, 97, 159);
     font-size: 1em;
     transition: 0.5s;
 }
@@ -214,26 +215,27 @@ header nav {
     pointer-events: none;
     font-size: 1.1em;
     letter-spacing: 0.2em;
-    color: rgb(4,97,159);
+    color: rgb(4, 97, 159);
     text-transform: uppercase;
     transition: 0.5s;
-  }
+}
 
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
-  color: rgb(4,97,159);
-  transform: translateX(10px) translateY(-7px);
-  font-size: 0.70em;
-  padding: 0 10px;
-  background: #fff;
-  border-left: 1px solid rgb(4,97,159);
-  border-right: 1px solid rgb(4,97,159);
-  letter-spacing: 0.2em;
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+    color: rgb(4, 97, 159);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.70em;
+    padding: 0 10px;
+    background: #c5c2c2;
+    border-left: 1px solid rgb(4, 97, 159);
+    border-right: 1px solid rgb(4, 97, 159);
+    letter-spacing: 0.2em;
 }
 
 .inputBox input:valid,
 .inputBox input:focus {
-  border: 1px solid rgb(4,97,159);
+    border: none;
+    border-bottom: 1px solid rgb(4, 97, 159);
 }
 
 .form-button-container {
@@ -244,10 +246,45 @@ header nav {
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    background: rgb(4,97,159);
+    background: rgb(4, 97, 159);
     padding: 10px 25px;
     border-radius: 5px;
-    border: 1px rgb(4,97,159);
+    border: 1px rgb(4, 97, 159);
+}
+
+.contact-data-container {
+    background-color: rgb(4, 97, 159);
+    position: relative;
+}
+
+.contact-data-square {
+    height: 50px;
+    width: 60px;
+    background-color: #fff;
+    position: absolute;
+    top: -1.5em;
+    left: -1.5em;
+}
+
+.contact-data-title {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 24px 24px 0px 24px;
+    margin-bottom: 0px;
+}
+
+.contact-data-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+    color: #fff;
+    column-gap: 2em;
+}
+
+.contact-data-info span {
+    margin-top: 1em;
 }
 
 /* MOBILE CSS */
@@ -257,8 +294,8 @@ header nav {
         height: 120vh;
         position: fixed;
         top: 0;
-        background: rgb(4,97,159);
-        background: linear-gradient(180deg, rgba(4,97,159,1) 0%, rgba(211,211,211,1) 100%);
+        background: rgb(4, 97, 159);
+        background: linear-gradient(180deg, rgba(4, 97, 159, 1) 0%, rgba(211, 211, 211, 1) 100%);
     }
 
     .header-container {
@@ -286,11 +323,11 @@ header nav {
         align-items: center;
     }
 
-    .main-menu.is-active li > a {
+    .main-menu.is-active li>a {
         animation: appear 0.3s both;
     }
 
-    .main-menu.is-active li > a:hover {
+    .main-menu.is-active li>a:hover {
         font-size: 40px;
         transition: all .5s ease;
     }
@@ -319,12 +356,13 @@ header nav {
 
     @keyframes appear {
         0% {
-          opacity: 0;
-          translate: 0 50px;
+            opacity: 0;
+            translate: 0 50px;
         }
+
         100% {
-          opacity: 1;
+            opacity: 1;
         }
-      }
+    }
 
 }
