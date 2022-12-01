@@ -184,6 +184,32 @@ header nav {
     transform: rotateY(180deg);
 }
 
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-front {
+    background: linear-gradient(-229deg, #7C98B3, #E7EFF9);
+}
+
+.card-back {
+    background: linear-gradient(229deg, #97afc6, #c0c0c0);
+    color: white;
+    transform: rotateY(180deg);
+}
+
 #hamburgerId {
     display: none;
 }
