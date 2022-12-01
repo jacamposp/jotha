@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -41,7 +42,7 @@ body {
 }
 
 header {
-    background: rgb(4, 97, 159);
+    background: #808080;
     width: 100%;
 }
 
@@ -63,7 +64,7 @@ header nav {
 
 .jotha-logo {
     height: 50px;
-    width: 50px;
+    width: 60px;
     margin: 10px;
 }
 
@@ -83,9 +84,10 @@ header nav {
 }
 
 .main-menu-item a {
-    color: #fff;
+    color: #e5e5e5;
     position: relative;
     text-decoration: none;
+    font-size: 20px;
 }
 
 
@@ -116,6 +118,7 @@ header nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 50px;
+    justify-items: center;
 }
 
 .images {
@@ -131,7 +134,7 @@ header nav {
 
 .text {
     margin: auto;
-    background: rgb(4, 97, 159);
+    background: #6D92A3;
     padding: 5px 15px;
 }
 
@@ -161,6 +164,26 @@ header nav {
     height: 65%;
 }
 
+.card-rotation {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-rotation-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-rotation:hover .card-rotation-content {
+    transform: rotateY(180deg);
+}
+
 #hamburgerId {
     display: none;
 }
@@ -172,12 +195,13 @@ header nav {
 
 /*  Contact us page  */
 .contact {
-    background-color: #c5c2c2;
+    background-color: #e5e5e5;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 15em;
 }
 
 .contact-form {}
@@ -191,6 +215,14 @@ header nav {
     row-gap: 15px;
 }
 
+.contact-form-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6D92A3;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
 .inputBox {
     position: relative;
     width: 100%;
@@ -200,10 +232,10 @@ header nav {
     width: 100%;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid rgb(4, 97, 159);
-    background: #c5c2c2;
+    border-bottom: 1px solid #6D92A3;
+    background: #e5e5e5;
     outline: none;
-    color: rgb(4, 97, 159);
+    color: #6D92A3;
     font-size: 1em;
     transition: 0.5s;
 }
@@ -215,27 +247,25 @@ header nav {
     pointer-events: none;
     font-size: 1.1em;
     letter-spacing: 0.2em;
-    color: rgb(4, 97, 159);
+    color: #6D92A3;
     text-transform: uppercase;
     transition: 0.5s;
 }
 
 .inputBox input:valid~span,
 .inputBox input:focus~span {
-    color: rgb(4, 97, 159);
+    color: #6D92A3;
     transform: translateX(10px) translateY(-7px);
     font-size: 0.70em;
     padding: 0 10px;
-    background: #c5c2c2;
-    border-left: 1px solid rgb(4, 97, 159);
-    border-right: 1px solid rgb(4, 97, 159);
+    background: #e5e5e5;
     letter-spacing: 0.2em;
 }
 
 .inputBox input:valid,
 .inputBox input:focus {
     border: none;
-    border-bottom: 1px solid rgb(4, 97, 159);
+    border-bottom: 1px solid #6D92A3;
 }
 
 .form-button-container {
@@ -246,14 +276,14 @@ header nav {
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    background: rgb(4, 97, 159);
+    background: #6D92A3;
     padding: 10px 25px;
     border-radius: 5px;
-    border: 1px rgb(4, 97, 159);
+    border: 1px #6D92A3;
 }
 
 .contact-data-container {
-    background-color: rgb(4, 97, 159);
+    background-color: #6D92A3;
     position: relative;
 }
 
@@ -294,7 +324,7 @@ header nav {
         height: 120vh;
         position: fixed;
         top: 0;
-        background: rgb(4, 97, 159);
+        background: #6D92A3;
         background: linear-gradient(180deg, rgba(4, 97, 159, 1) 0%, rgba(211, 211, 211, 1) 100%);
     }
 
