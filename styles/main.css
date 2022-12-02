@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@
 }
 
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Questrial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fcfbfb;
@@ -117,7 +118,7 @@ header nav {
     margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 2em;
     justify-items: center;
 }
 
@@ -130,16 +131,23 @@ header nav {
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
 }
 
 .text {
     margin: auto;
     background: #6D92A3;
     padding: 5px 15px;
+    width: 80%;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
 }
 
 .text span {
     color: #fff;
+    align-self: center;
+    font-size: 1.3em;
 }
 
 .items-container {
@@ -166,8 +174,8 @@ header nav {
 
 .card-rotation {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     perspective: 1000px;
 }
 
@@ -200,7 +208,12 @@ header nav {
     flex-direction: column;
 }
 
-.card-front {
+.card-back p {
+    padding: 0 1em;
+    line-height: 1.5em;
+}
+
+.card-front {       
     background: linear-gradient(-229deg, #7C98B3, #E7EFF9);
 }
 
@@ -208,6 +221,13 @@ header nav {
     background: linear-gradient(229deg, #97afc6, #c0c0c0);
     color: white;
     transform: rotateY(180deg);
+}
+
+.card-logo {
+    width: 80px;
+    height: 60px;
+    top: 1em;
+    position: fixed;
 }
 
 #hamburgerId {
