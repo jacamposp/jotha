@@ -15,7 +15,10 @@
     <div id="page">
         <header id="header">
             <div class="header-container container">
-                <a class="jotha-logo-container"><img class="jotha-logo" src="images/logo-white.png" alt="logo"></a>
+                <div class="logos-container">
+                    <a class="jotha-logo-container"><img class="jotha-logo" src="images/logo-white.png" alt="logo"></a>
+                    <a class="jotha-logo-container"><img class="jotha-logo" src="images/logo-black.png" alt="logo"></a>
+                </div>
                 <nav>
                     <div>
                         <ul id="menu" class="main-menu">
@@ -74,9 +77,8 @@
                                 </div>
                                 <div class="card-back">
                                     <img class="card-logo" alt="logo" src="images/logo-horinzontal-white.PNG">
-                                    <p>A website is essential for offeting social proof and establishing your
-                                        credibility as
-                                        a business.</p>
+                                    <p>A website is essential for offering social proof and establishing your
+                                        credibility as a business.</p>
                                 </div>
                             </div>
                         </div>
@@ -108,6 +110,40 @@
                     <div class="division">
                         <hr class="division-line">
                         <p class="division-title">Our Work</p>
+                    </div>
+                    <div class="work-container">
+                        <div class="left-container">
+                            <div>
+                                <h1 class="work-title">We create high quality digital solutions</h1>
+                                <p class="work-text">Whether project-specific or global, agency of record work, Jotha is uniquely
+                                    positioned to deliver strategic, growth-minded, and results driven services.</p>
+                                <button class="work-send-button">Book now</button>
+                            </div>
+                        </div>
+                        <div class="right-container">
+                            <!-- this slider can be used multiple times on the same page -->
+                            <!-- don't change class names because slider will not work -->
+                            <div class="slider">
+                                <div class="imgs">
+                                    <!-- you can add divs with class img here and they will be 
+           automatically added to slider -->
+                                    <!-- style="left: 0;" in case JS is disabled -->
+                                    <div class="img" style="left: 0;">
+                                        <span>Image 1</span>
+                                    </div>
+                                    <div class="img">
+                                        <span>Image 2</span>
+                                    </div>
+                                    <div class="img">
+                                        <span>Image 3</span>
+                                    </div>
+                                    <div class="img">
+                                        <span>Image 4</span>
+                                    </div>
+                                </div>
+                                <div class="dots"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -163,5 +199,7 @@
 
     </script>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </html>

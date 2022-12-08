@@ -43,8 +43,35 @@ body {
 }
 
 header {
-    background: #808080;
+    background: transparent;
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+header.active {
+    background-color: #808080;
+
+}
+
+header.active .main-menu-item a {
+    color: #e5e5e5
+}
+
+header.active .jotha-logo-container:nth-of-type(2) {
+    display: none;
+}
+
+header.active .jotha-logo-container:nth-of-type(1) {
+    display: inline;
+}
+
+header .jotha-logo-container:nth-of-type(1) {
+    display: none;
+}
+
+header .jotha-logo-container:nth-of-type(2) {
+    display: inline;
 }
 
 .header-container {
@@ -64,8 +91,8 @@ header nav {
 }
 
 .jotha-logo {
-    height: 50px;
-    width: 60px;
+    height: 60px;
+    width: 70px;
     margin: 10px;
 }
 
@@ -85,7 +112,7 @@ header nav {
 }
 
 .main-menu-item a {
-    color: #e5e5e5;
+    color: #000;
     position: relative;
     text-decoration: none;
     font-size: 20px;
@@ -213,7 +240,7 @@ header nav {
     line-height: 1.5em;
 }
 
-.card-front {       
+.card-front {
     background: linear-gradient(-229deg, #7C98B3, #E7EFF9);
 }
 
@@ -225,7 +252,7 @@ header nav {
 
 .card-logo {
     width: 80px;
-    height: 60px;
+    height: 50px;
     top: 1em;
     position: fixed;
 }
@@ -234,10 +261,141 @@ header nav {
     display: none;
 }
 
-/* work page */
+/* ################################### WORK SECTION ###################################### */
 .work {
     margin-top: 20px;
 }
+
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 40em;
+}
+
+.left-container {
+    margin-right: 6em;
+}
+
+.work-title {
+    color: #6D92A3;
+    font-size: 5em;
+    margin: 0;
+}
+
+.work-text {
+    margin: 0;
+    font-size: 1.4em;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    color: #7E7E7E;
+    margin: 22px 0;
+}
+
+.work-send-button {
+    cursor: pointer;
+    border: 1px solid #6D92A3;
+    color: #808080;
+    border-radius: 20px;
+    background-color: transparent;
+    height: 3em;
+    font-size: 15px;
+    font-weight: bold;
+    width: 12em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.slider, .slider .imgs {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    position: relative;
+  }
+  
+  .slider {
+    height: 100%;
+    max-height: 500px;
+  }
+  
+  .slider .imgs {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slider .img {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    left: 100%;
+    /* animation duration can't be greater than variable interval in JS! */
+    /* check JS for other settings */
+    animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+    animation-fill-mode: forwards;
+    background-size: cover !important;
+    background-position: 50% !important;
+  }
+  
+  /* Change images here */
+  .slider .img:nth-of-type(1) { background: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e"); }
+  .slider .img:nth-of-type(2) { background: url("https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg"); }
+  .slider .img:nth-of-type(3) { background: url("https://wallpapercave.com/wp/9F6GsSn.jpg"); }
+  .slider .img:nth-of-type(4) { background: url("https://k60.kn3.net/taringa/F/C/6/8/4/5/VCLR/3E9.jpg"); }
+  
+  .slider .img span {
+    padding: 7px 20px;
+    background: rgba(0, 0, 0, .8);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: #f0f0f0;
+    font-size: 14px;
+    font-family: sans-serif;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: gray;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+  }
+  
+  .active-dot {
+    background: #3f3f3f;
+    cursor: default;
+  }
+  
+  @keyframes leftNext {
+    from { left: 100%; }
+    to { left: 0; }
+  }
+  
+  @keyframes leftCurr {
+    from { left: 0; }
+    to { left: -100%; }
+  }
+  
+  @keyframes rightNext {
+    from { left: -100%; }
+    to { left: 0; }
+  }
+  
+  @keyframes rightCurr {
+    from { left: 0; }
+    to { left: 100%; }
+  }
 
 /*  Contact us page  */
 .contact {
