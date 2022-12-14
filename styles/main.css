@@ -477,13 +477,14 @@ header nav {
 }
 
 .form-button {
+    cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
     background: #6D92A3;
     padding: 10px 25px;
     border-radius: 5px;
-    border: 1px #6D92A3;
+    border: 2px #6D92A3;
 }
 
 .contact-data-container {
