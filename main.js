@@ -1,28 +1,27 @@
-$(function(){
-    $('.carousel-item').eq(0).addClass('active');
-    var total = $('.carousel-item').length;
-    var current = 0;
-    $('#moveRight').on('click', function(){
-      var next=current;
-      current= current+1;
-      setSlide(next, current);
-    });
-    $('#moveLeft').on('click', function(){
-      var prev=current;
-      current = current- 1;
-      setSlide(prev, current);
-    });
-    
-    $(window).on("scroll", function() {
-      if($(window).scrollTop() > 50) {
-        console.log('quee')
-          $("#header").addClass("active");
-      } else {
-          //remove the background property so it comes transparent again (defined in your css)
-         $("#header").removeClass("active");
-      }
+$(function () {
+  $('.carousel-item').eq(0).addClass('active');
+  var total = $('.carousel-item').length;
+  var current = 0;
+  $('#moveRight').on('click', function () {
+    var next = current;
+    current = current + 1;
+    setSlide(next, current);
   });
- 
+  $('#moveLeft').on('click', function () {
+    var prev = current;
+    current = current - 1;
+    setSlide(prev, current);
+  });
+
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 50) {
+      $("#header").addClass("active");
+    } else {
+      //remove the background property so it comes transparent again (defined in your css)
+      $("#header").removeClass("active");
+    }
+  });
+
   const sliders = document.querySelectorAll(".slider");
   // interval between switching images
   // can't be less than your animation duration in css!
@@ -57,7 +56,7 @@ $(function(){
       animateSlider();
       sliderImgs[0].style.left = "";
       intrvl = setInterval(animateSlider, interval);
-    }, interval - animDuration);   
+    }, interval - animDuration);
 
     /**
      * Animates images
@@ -74,7 +73,7 @@ $(function(){
       if (!right) {
         sliderImgs[nextImg].style.animationName = "leftNext";
         sliderImgs[currImg].style.animationName = "leftCurr";
-      } 
+      }
       else {
         sliderImgs[nextImg].style.animationName = "rightNext";
         sliderImgs[currImg].style.animationName = "rightCurr";
@@ -108,6 +107,53 @@ $(function(){
       intrvl = setInterval(animateSlider, interval);
     }
   }
-    
-    
-  });
+
+  function reveal() {
+    var reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach((reveal) => {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveal.getBoundingClientRect().top;
+      var elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveal.classList.add('active');
+        //$('.scroll').addClass('not-visible');
+      }
+      else {
+        reveal.classList.remove('active');
+        //$('.scroll').removeClass('not-visible');
+      }
+    });
+  }
+
+  function hideScrollIcon() {
+    if ($('.services').hasClass('active')) {
+      $('.scroll').addClass('not-visible');
+    }
+    else {
+      $('.scroll').removeClass('not-visible');
+    }
+  }
+
+  /*function headerScroll() {
+    const header = document.querySelector('header');
+
+    let scroll = this.scrollY;
+    if (scroll > 254 && header.clientHeight > 60) {
+      header.style.height = `60px`;
+      return;
+    }
+    if (scroll > 254) return;
+
+    const defaultHeight = 100;
+
+    let newHeight = defaultHeight - scroll / 7;
+    if (newHeight < 60) newHeight = 60;
+    header.style.height = `${newHeight}px`;
+  }
+
+  window.addEventListener('scroll', headerScroll);*/
+  window.addEventListener("scroll", hideScrollIcon);
+  window.addEventListener("scroll", reveal);
+});
